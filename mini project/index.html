@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Revou Matematik Segitiga & Jajar Genjang</title>
+
+    <!-- style start -->
+    <link rel="stylesheet" href="index.css">
+    <!-- style end -->
+
+    <!-- script start -->
+    <script src="index.js"></script>
+    <!-- script end -->
+</head>
+<body>
+    <!-- header / navbar start -->
+    <header class="sticky-top">
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a id="triangleLink" class="active nav-link" href="#triangleSection" onClick="triangleLink()">
+                        Segitiga
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a id="parallelogramLink" class="nav-link" href="#parallelogramSection" onClick="parallelogramLink()">
+                        JajarGenjang
+                    </a>
+                </li>
+            </ul>
+        </nav>        
+    </header>
+    <!-- header / navbar end -->
+
+    <!-- title start-->
+    <div class="title">
+        <h1>Welcome to REVOU Kalkulator </h1>
+        <p><b>Hi Friends, My Name Ramanda Danny :)</b></p>
+        <p><small>REVOU Kalkulator adalah aplikasi web sederhana yang dapat membantu Anda menghitung hasil keliling dan luas bangun ruang 2D khususnya Segitiga dan Jajar Genjang.</small></p>
+    </div>
+    <!-- title end -->
+
+    <!-- main page start-->
+    <main>
+        <!-- segitiga start -->
+        <section id="triangleSection">
+            <div class="card card-primary w-50 mx-auto">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>Luas Segitiga</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./images/triangle-area.jpeg" alt="Triangle Area Formula" width="50%">
+                </div>
+                <div class="card-body">
+                    <form id="s1f1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="base">Base</label>
+                                    <input type="number" min="0" name="base" id="base" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="height">Height</label>
+                                    <input type="number" min="0" name="height" id="height" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div id="s1result1"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info" onclick="triangleArea()">Hitung</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s1f1','s1result1')">Reset</button>
+                </div>
+            </div>
+
+            <div class="card card-primary w-50 mx-auto">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>Keliling Segitiga</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./images/download.png" alt="Triangle Perimeter Formula" width="50%">
+                </div>
+                <div class="card-body">
+                    <form id="s1f2">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="side1">Side A</label>
+                                    <input type="number" min="0" name="side1" id="side1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="side2">Side B</label>
+                                    <input type="number" min="0" name="side2" id="side2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="side3">Side C</label>
+                                    <input type="number" min="0" name="side3" id="side3" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div id="s1result2"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info" onclick="trianglePerimeter()">Hitung</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s1f2','s1result2')">Reset</button>
+                </div>
+            </div>
+        </section>
+        <!-- segitiga end -->
+
+        <!-- jajar genjang start -->
+        <section id="parallelogramSection" class="hide">
+            <div class="card card-success w-50 mx-auto">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>Luas Segitiga</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./images/Luas Jajargenjang.jpg" alt="Parallelogram Area Formula" width="50%">
+                </div>
+                <div class="card-body">
+                    <form id="s2f1">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="s2n1">Base</label>
+                                    <input type="number" min="0" name="s2n1" id="s2n1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="s2n2">Height</label>
+                                    <input type="number" min="0" name="s2n2" id="s2n2" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div id="s2result1"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info" onclick="parallelogramArea()">Hitung</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s2f1', 's2result1')">Reset</button>
+                </div>
+            </div>
+
+            <div class="card card-success w-50 mx-auto">
+                <div class="card-header">
+                    <div class="card-title">
+                        <h3>Keliling JajarGenjang</h3>
+                    </div>
+                </div>
+                <div class="img">
+                    <img src="./images/Luas Jajargenjang.jpg" alt="Parallelogram Perimeter Formula" width="50%">
+                </div>
+                <div class="card-body">
+                    <form id="s2f2">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="s2n3">Base</label>
+                                    <input type="number" min="0" name="s2n3" id="s2n3" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="s2n4">Height</label>
+                                    <input type="number" min="0" name="s2n4" id="s2n4" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div id="s2result2"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-info" onclick="parallelogramPerimeter()">Hitung</button>
+                    <button type="reset" class="btn btn-default" onclick="reset('s2f2', 's2result2')">Reset</button>
+                </div>
+            </div>
+        </section>
+        <!-- jajar genjang end -->
+    </main>
+    <!-- main page end -->
+
+    <!-- footer start -->
+    <footer class="footer sticky-bottom">
+        <p>Copyright &copy;2023 Ramanda Danny.ITTP </p>
+    </footer>
+    <!-- footer end -->
+
+</body>
+</html>
